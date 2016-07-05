@@ -20,6 +20,6 @@
   },
   "scripts": {
     "start": "node ./bin/www",
-    "test": "node test/routes.js" // we added this line
+    "test": "node test/routes.js"
   },
 }
