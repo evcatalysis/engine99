@@ -6,6 +6,7 @@ FROM debian:jessie
 # ...
 # Replace shell with bash so we can source files
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
 # Set environment variables
 ENV appDir /var/www/app/current
 
@@ -29,8 +30,7 @@ RUN apt-get install -y -q --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get -y autoclean
 
-# Dockerfile
-# ...
+
 ENV NVM_DIR /usr/local/nvm
 ENV NODE_VERSION 5.1.0
 
@@ -59,8 +59,6 @@ RUN npm i -g pm2
 # Add application files
 ADD . /var/www/app/current
 
-# Dockerfile
-# ...
 #Expose the port
 EXPOSE 4500
 
